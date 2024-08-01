@@ -1,38 +1,97 @@
-.App {
+/* General Styles */
+.main-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack the containers vertically on smaller screens */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 20vw; /* Max width on larger screens */
+  padding: 10px;
+}
+
+/* Speech Container */
+.speech-container {
+  flex-grow: 1; /* Grow to fill remaining space */
+  padding: 10px;
+}
+
+/* Agriculture Questions Container */
+.agriculture-questions-container {
+  padding: 20px;
+  background-color: #e6f7e6;
+  font-family: Arial, sans-serif;
+}
+
+/* Agriculture Questions Title */
+.agriculture-questions-title {
+  color: #2e7d32;
+  font-size: 24px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Agriculture Questions List */
+.agriculture-questions-list {
+  list-style-type: decimal;
+  padding-left: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Individual Question */
+.agriculture-question {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.agriculture-question:hover {
+  color: #1b5e20;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 100%; /* Full width on tablets and smaller screens */
+  }
+
+  .agriculture-questions-container {
+    padding: 15px;
+  }
+
+  .agriculture-questions-title {
+    font-size: 22px;
+  }
+
+  .agriculture-question {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .dashboard-container {
+    display: none; /* Hide the dashboard container on small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .speech-container {
+    padding: 10px;
+  }
+
+  .agriculture-questions-container {
+    padding: 10px;
+  }
+
+  .agriculture-questions-title {
+    font-size: 20px;
+  }
+
+  .agriculture-question {
+    font-size: 14px;
+    margin-bottom: 15px;
   }
 }

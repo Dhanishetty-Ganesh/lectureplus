@@ -24,6 +24,7 @@
 .agriculture-questions-container {
   padding: 20px;
   background-color: #e6f7e6;
+  height: 100vh;
   font-family: Arial, sans-serif;
 }
 
@@ -37,17 +38,26 @@
 
 /* Agriculture Questions List */
 .agriculture-questions-list {
-  list-style-type: decimal;
-  padding-left: 40px;
+  list-style-type: none;
+  padding-left: 10px;
 }
 
 /* Individual Question */
 .agriculture-question {
   color: black;
+  font-weight: bold;
   font-size: 18px;
-  margin-bottom: 30px;
+  padding-left: 30px;
+  margin-bottom: 16px;
 }
 
+.bit-name {
+  color:red;
+  font-weight: bold;
+  font-size: `20px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
 .agriculture-question:hover {
   color: #1b5e20;
   cursor: pointer;
